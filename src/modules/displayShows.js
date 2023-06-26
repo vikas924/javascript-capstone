@@ -1,13 +1,12 @@
 import fetchShows from './fetchList.js';
-import { baseUrl } from "./config.js";
+import { baseUrl } from './config.js';
 
-const displayShows = async () => { 
-    const showList  = document.getElementById('showsList');
-    const res = await fetchShows(baseUrl);
-    let html = ``;
-    res.forEach((item,i) => {
-        if(i < 12){
-            html += `<div class="col-md-3 mt-5">
+const displayShows = async () => {
+  const showList = document.getElementById('showsList');
+  const res = await fetchShows(baseUrl);
+  let html = '';
+  res.forEach((item) => {
+    html += `<div class="col-md-3 mt-5">
                       <div class="card" >
                         <img src="${item.image.medium}" class="card-img-top" alt="Image">
                         <div class="card-body">
@@ -26,11 +25,8 @@ const displayShows = async () => {
                         </div>
                        </div>
                      </div>`;
-        }else{
-            return false;
-        }
-      });
-    showList.innerHTML = html;
-}
+  });
+  showList.innerHTML = html;
+};
 
 export default displayShows;
