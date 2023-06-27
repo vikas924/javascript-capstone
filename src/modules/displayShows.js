@@ -1,5 +1,7 @@
 import { fetchShows, fetchdata } from './fetchList.js';
-import { baseUrl } from './config.js';
+import { baseUrl, involvmentUrl } from './config.js';
+import { fetchLikes, storeLike } from './likesController.js';
+import showsCounter from './showsCounter.js';
 
 const displayShows = async () => {
   const showList = document.getElementById('showsList');
@@ -27,6 +29,38 @@ const displayShows = async () => {
                      </div>`;
   });
   showList.innerHTML = html;
+  let showCount = 0;
+  showCount = showsCounter(res);
+  document.getElementById('show_conter').innerHTML = `(${showCount})`;
+  const likesRes = await fetchLikes(involvmentUrl);
+  if (Array.isArray(likesRes)) {
+    likesRes.forEach((item) => {
+      const element = document.getElementById(`counter${item.item_id}`);
+      element.textContent = item.likes;
+      const parentCardElement = element.parentElement.parentElement.parentElement.parentElement;
+      const likesElement = parentCardElement.querySelector('.likes');
+      likesElement.classList.remove('fa-regular');
+      likesElement.classList.add('fa-solid');
+      likesElement.classList.add('text-danger');
+      likesElement.setAttribute('data-liked', 'true');
+    });
+  }
+
+  const likesclick = document.querySelectorAll('.likes');
+  likesclick.forEach((likesclick) => {
+    likesclick.addEventListener('click', async (event) => {
+      const { target } = event;
+      const showId = target.getAttribute('data-id');
+      const counter = document.getElementById(`counter${showId}`);
+
+      target.classList.remove('fa-regular');
+      target.classList.add('fa-solid');
+      target.classList.add('text-danger');
+      target.setAttribute('data-liked', 'true');
+      counter.textContent = parseInt(counter.textContent, 10) + 1;
+      await storeLike(involvmentUrl, showId);
+    });
+  });
 
   const commentsbutton = document.querySelectorAll('.comments');
   commentsbutton.forEach((comments) => comments.addEventListener('click', async (event) => {
