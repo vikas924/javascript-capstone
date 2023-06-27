@@ -1,6 +1,6 @@
 import fetchShows from './fetchList.js';
 import { baseUrl, involvmentUrl } from './config.js';
-import fetchLikes from './likesController.js';
+import { fetchLikes, storeLike } from './likesController.js';
 
 const displayShows = async () => {
   const showList = document.getElementById('showsList');
@@ -42,6 +42,22 @@ const displayShows = async () => {
       likesElement.setAttribute('data-liked', 'true');
     });
   }
+
+  const likesclick = document.querySelectorAll('.likes');
+  likesclick.forEach((likesclick) => {
+    likesclick.addEventListener('click', async (event) => {
+      const { target } = event;
+      const showId = target.getAttribute('data-id');
+      const counter = document.getElementById(`counter${showId}`);
+
+      target.classList.remove('fa-regular');
+      target.classList.add('fa-solid');
+      target.classList.add('text-danger');
+      target.setAttribute('data-liked', 'true');
+      counter.textContent = parseInt(counter.textContent, 10) + 1;
+      await storeLike(involvmentUrl, showId);
+    });
+  });
 };
 
 export default displayShows;

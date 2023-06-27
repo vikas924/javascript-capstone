@@ -15,5 +15,22 @@ const fetchLikes = async (involvmentUrl) => {
     return error;
   }
 };
+const storeLike = async (involvmentUrl, showId) => {
+  const url = `${involvmentUrl}likes`;
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ item_id: showId }),
+    });
+    const data = await response.json();
 
-export default fetchLikes;
+    return data;
+  } catch (error) {
+    return error;
+  }
+};
+
+export { fetchLikes, storeLike };
