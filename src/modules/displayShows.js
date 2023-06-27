@@ -1,6 +1,7 @@
 import fetchShows from './fetchList.js';
 import { baseUrl, involvmentUrl } from './config.js';
 import { fetchLikes, storeLike } from './likesController.js';
+import showsCounter from './showsCounter.js';
 
 const displayShows = async () => {
   const showList = document.getElementById('showsList');
@@ -28,7 +29,9 @@ const displayShows = async () => {
                      </div>`;
   });
   showList.innerHTML = html;
-
+  let showCount = 0;
+  showCount = showsCounter(res);
+  document.getElementById('show_conter').innerHTML = `(${showCount})`;
   const likesRes = await fetchLikes(involvmentUrl);
   if (Array.isArray(likesRes)) {
     likesRes.forEach((item) => {
