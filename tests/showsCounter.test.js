@@ -1,34 +1,18 @@
 import showsCounter from '../src/modules/showsCounter.js';
 
-describe('Homepage Counter', () => {
-  const taskList = [
-    {
-      id: 1,
-      url: 'https:',
-      name: 'Kamran',
-    },
-    {
-      id: 2,
-      url: 'https:',
-      name: 'Kamran',
-    },
-    {
-      id: 3,
-      url: 'https:',
-      name: 'Kamran',
-    },
-    {
-      id: 4,
-      url: 'https:',
-      name: 'Kamran',
-    },
-    {
-      id: 5,
-      url: 'https:',
-      name: 'Kamran',
-    },
-  ];
-  it('should return count of the Shows List on the Home page', () => {
-    expect(showsCounter(taskList)).toEqual(5);
+
+// Mock the document and div element for testing
+document.body.innerHTML = `
+  <div id="showsList">
+    <div class="show">Show 1</div>
+    <div class="show">Show 2</div>
+    <div class="show">Show 3</div>
+  </div>
+`;
+
+describe('showsCounter', () => {
+  it('should return the correct count of child elements in showsList div', () => {
+    const result = showsCounter();
+    expect(result).toBe(3);
   });
 });
