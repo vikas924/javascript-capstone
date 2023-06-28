@@ -4,6 +4,7 @@ import { fetchLikes, storeLike } from './likesController.js';
 import showsCounter from './showsCounter.js';
 import { addCommentForm, showComments } from './commentform.js';
 import postData from './postdata.js';
+import commentsCounter from './commentcounter.js';
 
 const displayShows = async () => {
   const showList = document.getElementById('showsList');
@@ -64,6 +65,8 @@ const displayShows = async () => {
     });
   });
 
+  const commentElement = document.querySelector('#commentsCounter');
+
   const commentsbutton = document.querySelectorAll('.comments');
   commentsbutton.forEach((comments) => comments.addEventListener('click', async (event) => {
     const modal = document.getElementById('Modal');
@@ -93,6 +96,10 @@ const displayShows = async () => {
     addCommentForm();
     await showComments(Id);
 
+    let commentCounter = '';
+    commentCounter = commentsCounter();
+    commentElement.innerHTML = commentCounter;
+
     const form = document.querySelector('.form');
 
     form.addEventListener('submit', async (e) => {
@@ -107,6 +114,8 @@ const displayShows = async () => {
         };
         await postData(`${involvmentUrl}comments`, data);
         await showComments(Id);
+        commentCounter = commentsCounter();
+        commentElement.innerHTML = commentCounter;
         document.getElementById('user').value = '';
         document.getElementById('comment').value = '';
       }
@@ -122,6 +131,7 @@ const displayShows = async () => {
     document.body.classList.remove('modal-open');
     const commentlist = document.querySelector('#commentList');
     commentlist.innerHTML = '';
+    commentElement.innerHTML = '';
   });
 };
 
