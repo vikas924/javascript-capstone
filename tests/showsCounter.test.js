@@ -1,6 +1,5 @@
 import showsCounter from '../src/modules/showsCounter.js';
 
-
 // Mock the document and div element for testing
 document.body.innerHTML = `
   <div id="showsList">
