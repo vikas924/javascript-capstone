@@ -31,7 +31,7 @@ const showComments = async (Id) => {
     commentdata.forEach((_, index) => {
       const length = commentdata.length - 1;
       const updateid = length - index;
-      html += `<p class = "bold-text text-center usercomments">${commentdata[updateid].creation_date} ${commentdata[updateid].username} ${commentdata[updateid].comment}</p>`;
+      html += `<p class = "bold-text text-center usercomments">${commentdata[updateid].creation_date} ${commentdata[updateid].username}: ${commentdata[updateid].comment}</p>`;
     });
   } else {
     html = '';
