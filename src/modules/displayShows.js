@@ -2,6 +2,7 @@ import { fetchShows, fetchdata } from './fetchList.js';
 import { baseUrl, involvmentUrl } from './config.js';
 import { fetchLikes, storeLike } from './likesController.js';
 import showsCounter from './showsCounter.js';
+import showComments from './commentform.js';
 
 const displayShows = async () => {
   const showList = document.getElementById('showsList');
@@ -87,6 +88,8 @@ const displayShows = async () => {
     document.getElementById('showType').innerHTML = `Type: ${showdata.type}`;
     document.getElementById('showPremiered').innerHTML = `Genre: ${genrehtml}`;
     document.getElementById('showEnd').innerHTML = `Seasons: ${seasons.length}`;
+
+    await showComments(Id);
   }));
 
   const modalclose = document.querySelector('#closeIcon');
@@ -96,6 +99,8 @@ const displayShows = async () => {
     modal.setAttribute('aria-hidden', 'false');
     modal.style.display = 'none';
     document.body.classList.remove('modal-open');
+    const commentlist = document.querySelector('#commentList');
+    commentlist.innerHTML = '';
   });
 };
 
