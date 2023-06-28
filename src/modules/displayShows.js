@@ -2,7 +2,8 @@ import { fetchShows, fetchdata } from './fetchList.js';
 import { baseUrl, involvmentUrl } from './config.js';
 import { fetchLikes, storeLike } from './likesController.js';
 import showsCounter from './showsCounter.js';
-import showComments from './commentform.js';
+import { addCommentForm, showComments } from './commentform.js';
+import postData from './postdata.js';
 
 const displayShows = async () => {
   const showList = document.getElementById('showsList');
@@ -89,7 +90,27 @@ const displayShows = async () => {
     document.getElementById('showPremiered').innerHTML = `Genre: ${genrehtml}`;
     document.getElementById('showEnd').innerHTML = `Seasons: ${seasons.length}`;
 
+    addCommentForm();
     await showComments(Id);
+
+    const form = document.querySelector('.form');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const user = document.querySelector('#user').value.trim();
+      const Comments = document.querySelector('#comment').value.trim();
+      if ((user.length !== 0) && (Comments.length !== 0)) {
+        const data = {
+          item_id: Id,
+          username: user,
+          comment: Comments,
+        };
+        await postData(`${involvmentUrl}comments`, data);
+        await showComments(Id);
+        document.getElementById('user').value = '';
+        document.getElementById('comment').value = '';
+      }
+    });
   }));
 
   const modalclose = document.querySelector('#closeIcon');
