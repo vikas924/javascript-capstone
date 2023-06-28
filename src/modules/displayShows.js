@@ -33,7 +33,7 @@ const displayShows = async () => {
   });
   showList.innerHTML = html;
   let showCount = 0;
-  showCount = showsCounter(res);
+  showCount = showsCounter();
   document.getElementById('show_conter').innerHTML = `(${showCount})`;
   const likesRes = await fetchLikes(involvmentUrl);
   if (Array.isArray(likesRes)) {

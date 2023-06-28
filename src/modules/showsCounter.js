@@ -1,6 +1,8 @@
-const showsCounter = (commentList) => {
-  const keys = Object.keys(commentList);
-  return keys.length;
+const showsCounter = () => {
+  const divElement = document.getElementById('showsList');
+  const childCount = divElement.childElementCount;
+
+  return childCount;
 };
 
 export default showsCounter;
