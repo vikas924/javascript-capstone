@@ -16,7 +16,7 @@ const addCommentForm = async () => {
             </div>
             <div class="form-group mt-3 row justify-content-start">
               <div class="col-12">
-                  <button type="submit" class="btn btn-outline-primary btn-submit d-flex ">Comment</button>
+                  <button type="submit" class="btn btn-submit d-flex formbutton">Comment</button>
               </div>
             </div>
           </form>`;

@@ -6,22 +6,22 @@
     <title>Javascript Capstone</title>
 </head>
 <body>
-      <header class="bg-light border-bottom border-1 p-3">
-        <nav class="navbar navbar-expand-md navbar-light bg-light container">
-            <a class="navbar-brand" href="#">Logo</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+      <header class="border-bottom border-1 p-3 background">
+        <nav class="navbar navbar-expand-md navbar-light container">
+            <a class="navbar-brand logolink links" href="#">Logo</a>
+            <button class="navbar-toggler navbutton" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon navimg"></span>
             </button>
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-              <ul class="navbar-nav w-50 justify-content-between">
+            <div class="collapse navbar-collapse d-flex navheader" id="navbarNav">
+              <ul class="navbar-nav w-50 ullist navul">
                 <li class="nav-item active">
-                  <a class="nav-link h3" href="#">Shows<span id="show_conter"> </span></a>
+                  <a class="nav-link h3 ullinks links" href="#">Shows<span id="show_conter"> </span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link h3" href="#">Planets</a>
+                  <a class="nav-link h3 ullinks links" href="#">Planets</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link h3" href="#">Races</a>
+                  <a class="nav-link h3 ullinks links" href="#">Races</a>
                 </li>
                 
               </ul>
@@ -30,7 +30,7 @@
       </header>
       <main class="container">
         <section id="shows">
-            <div class="row" id="showsList">
+            <div class="row cardsrow" id="showsList">
                 
             </div>
         </section>
@@ -38,13 +38,13 @@
      <!-- Modal -->
      <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-    <div class="modal-content modal-xl">
+    <div class="modal-content modal-xl modalcontent">
       <div class="modal-body">
         <div class="row">
           <div class="col-12 d-flex justify-content-center">
             <img class=""  id="showImage" src="" alt="">
           </div>
-          <div class="col-1 closeIcon" id="closeIcon"><i class="fa-solid fa-xmark text-danger fa-2x d-flex justify-content-end"></i></div>
+          <div class="closeIcon" id="closeIcon"><i class="fa-solid fa-xmark fa-2x d-flex justify-content-end"></i></div>
         </div>
         <div class="row">
           <div class="col-md-12 mt-2 d-flex justify-content-center">
@@ -86,9 +86,9 @@
     </div>
   </div>
 </div>      
-    <footer class="footer bg-light border-top border-black border-2 mt-5">
+    <footer class="footer border-top border-black border-2 mt-5 background">
         <div class="containe p-4">
-          <span class="footer-text">Created by Microverse under CC License.</span>
+          <span class="footer-text links">Created by Microverse under CC License.</span>
         </div>
       </footer>
       

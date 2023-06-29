@@ -2,21 +2,143 @@
   font-size: 1.5rem;
 }
 
+.navimg {
+  background-image: url(/menu-svgrepo-com.svg);
+}
+
+.background {
+  background-color: #333;
+}
+
+.navbutton {
+  border: none;
+}
+
+.links {
+  color: white;
+}
+
+.navheader {
+  justify-content: center;
+}
+
+.navul {
+  align-items: center;
+}
+
+.maincommentbutton {
+  background-color: #333;
+  color: #fff;
+}
+
+.maincommentbutton:hover {
+  border: 1px solid #333;
+}
+
+.maincommentbutton:focus {
+  background-color: #333;
+  color: #fff;
+}
+
+#Modal {
+  overflow: hidden;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
 .modal-dialog {
   max-width: 800px;
-  margin-block: 2.5vh;
+  margin-top: 3vh;
+  margin-bottom: 0;
+}
+
+.modalcontent {
+  border: 3px solid #fff;
+  border-radius: 1rem 1rem 0 0;
+  background-color: #333;
+  color: #fff;
 }
 
 .modal-body {
-  min-height: 95vh;
+  height: 96.9vh;
+  overflow-y: scroll;
+}
+
+.modal-body::-webkit-scrollbar {
+  display: none;
 }
 
 #closeIcon {
-  position: absolute;
-  right: 1rem;
+  position: fixed;
   cursor: pointer;
+  max-width: 795px;
+  padding: 0 2rem 0 0;
+  width: 100%;
+}
+
+#closeIcon:hover {
+  color: wheat;
 }
 
 .likes {
   cursor: pointer;
+}
+
+#commentList {
+  border: 1px solid #fff;
+  padding-top: 0.5rem;
+  max-height: 240px;
+  overflow-y: scroll;
+}
+
+.formbutton {
+  border-color: #fff;
+  color: #fff;
+}
+
+.formbutton:hover {
+  border-color: black;
+  color: black;
+  background-color: #fff;
+}
+
+.mainimage {
+  height: 300px;
+}
+
+@media (max-width: 575px) {
+  .cardsrow {
+    justify-content: center;
+  }
+
+  .cards {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 765px) {
+  .navheader {
+    justify-content: space-between;
+  }
+
+  .navul {
+    justify-content: space-between;
+  }
+
+  .logolink {
+    margin-right: 6rem;
+  }
+
+  .ullist {
+    align-items: center;
+    justify-content: unset;
+    gap: 6rem;
+  }
+
+  .ullinks {
+    padding: 0;
+    margin: 0;
+  }
 }
