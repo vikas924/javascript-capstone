@@ -11,9 +11,9 @@ const displayShows = async () => {
   const res = await fetchShows(baseUrl);
   let html = '';
   res.forEach((item) => {
-    html += `<div class="col-md-3 mt-5">
+    html += `<div class=" cards col-sm-6 col-md-4 col-lg-3 mt-5">
                       <div class="card" >
-                        <img src="${item.image.medium}" class="card-img-top" alt="Image">
+                        <img src="${item.image.medium}" class="card-img-top mainimage" alt="Image">
                         <div class="card-body">
                           
                           <div class="d-flex justify-content-between align-items-center">
@@ -25,7 +25,7 @@ const displayShows = async () => {
                               <div class="col-md-12"><span class="d-flex justify-content-end" id="likesCounter${item.id}"><span id="counter${item.id}">0 </span> Likes</span></div>
                           </div>
                           <div class="row mt-2">
-                              <div class="col-md-12"><button class="btn btn-dark w-100 comments" data-showId="${item.id}" >Comments</button></div>
+                              <div class="col-md-12"><button class="btn w-100 comments maincommentbutton" data-showId="${item.id}" >Comments</button></div>
                           </div>
                         </div>
                        </div>
@@ -112,12 +112,12 @@ const displayShows = async () => {
           username: user,
           comment: Comments,
         };
-        await postData(`${involvmentUrl}comments`, data);
-        await showComments(Id);
-        commentCounter = commentsCounter();
-        commentElement.innerHTML = commentCounter;
         document.getElementById('user').value = '';
         document.getElementById('comment').value = '';
+        await postData(`${involvmentUrl}comments`, data);
+        commentCounter = commentsCounter();
+        commentElement.innerHTML = commentCounter;
+        await showComments(Id);
       }
     });
   }));

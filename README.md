@@ -1,12 +1,11 @@
 <a name="readme-top"></a>
 
-
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <img src="logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>WebPacks boilerplate</b></h3>
+  <h3><b>Js capstone project</b></h3>
 
 </div>
 
@@ -34,19 +33,21 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Setup WebPack <a name="about-project"></a>
+# 📖 Js capstone project <a name="about-project"></a>
 
-> A simple yet powerful webpack boilerplate.
+> Js capstone project is a simple website that allows users to view and learn about different movies. Users can view images of each movie, add comments to selected movie, and see comments that others users have left.
 
+This project is built using JavaScript, HTML, and CSS, with webpack as the build tool. It makes use of the TvmazeAPI to retrieve information about each movies, and also utilizes a custom API to store and retrieve comments.
 
 ## 🛠 Built With <a name="built-with"></a>
+
 1- HTML.
 2- CSS.
 3- javascript
 4- linters.
 5- Webpacks
-### Tech Stack <a name="tech-stack"></a>
 
+### Tech Stack <a name="tech-stack"></a>
 
 <details>
   <summary>Client</summary>
@@ -57,15 +58,14 @@
   </ul>
 </details>
 
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- configured Webpacks
+- Retrieve data from movieapi
+- Add comments for selected movie
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- GETTING STARTED -->
 
@@ -87,7 +87,7 @@ Run this command:
 
 ```sh
   cd my-folder
-  git clone https://github.com/kamranasif506/Portfolio.git
+  git clone git@github.com:kamranasif506/javascript-capstone.git
 ```
 
 ### Install
@@ -97,7 +97,7 @@ Install this project with:
 Run this command:
 
 ```sh
-  cd awesome-books
+  cd javascript-capstone
   npm install
 ```
 
@@ -116,6 +116,7 @@ You can run the tests using the following commands:
     npx stylelint "**/*.{css,scss}"
     run: npx eslint .
 ```
+
 ### Deployment
 
 You can deploy this project using github pages.
@@ -126,20 +127,23 @@ You can deploy this project using github pages.
 
 ## 👥 Authors <a name="authors"></a>
 
-
 👤 Kamran Asif
 
 - GitHub: [@githubhandle](https://github.com/kamranasif506)
 - Twitter: [@twitterhandle](https://twitter.com/kamiasif55)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kamran-asif-76160926b/)
 
+👤 **Vikas Chib**
+
+- GitHub: [@vikas924](https://github.com/vikas924)
+- Twitter: [@vikas410190](https://twitter.com/vikas410190)
+- LinkedIn: [Vikas Singh](https://www.linkedin.com/in/vikas-singh-586a07132/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
 
 - [ ] Add Design animations
 - [ ] Enhance the styling for all screens.
@@ -150,10 +154,9 @@ You can deploy this project using github pages.
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues](https://github.com/kamranasif506/javascript-capstone/issues) page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,7 +164,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project just give it a star ⭐️. 
+If you like this project just give it a star ⭐️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
