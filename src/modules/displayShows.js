@@ -115,9 +115,9 @@ const displayShows = async () => {
         document.getElementById('user').value = '';
         document.getElementById('comment').value = '';
         await postData(`${involvmentUrl}comments`, data);
+        await showComments(Id);
         commentCounter = commentsCounter();
         commentElement.innerHTML = commentCounter;
-        await showComments(Id);
       }
     });
   }));
