@@ -17,6 +17,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)    
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -66,6 +67,18 @@ This project is built using JavaScript, HTML, and CSS, with webpack as the build
 - Add comments for selected movie
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+
+- [Live Link](https://kamranasif506.github.io/javascript-capstone/dist/index.html)
+
+- [Project Demo](https://drive.google.com/file/d/1km_HK3XInM8Ho9PHDPZIa69qbqROIUPp/view?usp=sharing)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- GETTING STARTED -->
 
