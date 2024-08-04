@@ -73,7 +73,7 @@ This project is built using JavaScript, HTML, and CSS, with webpack as the build
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Link](https://kamranasif506.github.io/javascript-capstone/dist/index.html)
+- [Live Link](https://vikas924.github.io/javascript-capstone/dist/)
 
 - [Project Demo](https://drive.google.com/file/d/1km_HK3XInM8Ho9PHDPZIa69qbqROIUPp/view?usp=sharing)
 
